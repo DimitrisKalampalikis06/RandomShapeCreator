@@ -10,7 +10,7 @@ t.speed(350)
 
 t.pu()
 
-shapess = ['circle', "square", 'rectangle', "triangle","star"]
+shapess = ['circle', "square", 'rectangle', "triangle","romb"]
 
 
 class Shapes():
@@ -71,15 +71,18 @@ class Shapes():
             t.fd((self.length + self.length2) / 2)
             t.end_fill()
             t.pu()
-        if str(self.shape) == 'star':
+        if str(self.shape) == 'romb':
             t.pencolor(self.color)
             t.fillcolor(self.fill)
             t.goto(self.x, self.y)
             t.begin_fill()
             t.pd()
             for i in range(5):
-                t.rt(40)
+                t.rt(30)
+                t.fd((self.length + self.length2)/2)
+                t.rt(120)
                 t.fd((self.length + self.length2) / 2)
+                t.rt(30)
             t.end_fill()
             t.pu()
 
